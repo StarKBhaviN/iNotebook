@@ -15,22 +15,22 @@ router.post(
     body("gender", "Gender Required..."),
     body("email", "Enter a Valid E-mail...").isEmail(),
     body("contact", "Enter a Valid Contact...").isLength({ min : 10, max : 10}),
-    body("bio", "About You").isLength({ min : 10, max : 30}),
-    body("password", "password must be atleast 5 chars").isLength({ min: 6 }),
-    // body("img", "your image")
+    body("bio", "About You").isLength({ min : 10}),
+    body("password", "password must be atleast 5 chars").isLength({ min: 6 })
   ],
   async (req, res) => {
     // If there are errors return bad requests and the errors
+    let success = false;
+
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      res.status(400).json({ errors: errors.array() });
+      return res.status(400).json({success, errors: errors.array() });
     }
 
     // Check weather the user exists already
     try {
       let user = await User.findOne({ email: req.body.email });
       if (user) {
-        success = false
         return res.status(400).json({ success, error: "Sorry User with this email already exists" });
       }
 
@@ -44,12 +44,8 @@ router.post(
         email: req.body.email,
         contact: req.body.contact,
         bio: req.body.bio,
-        password: securedPass,
-        // img: req.body.img,
+        password: securedPass
       });
-      // then(user => res.json(user))
-      //   .catch(err=> {console.log(err)
-      // res.json({error : "Please Enter Unique Value For Email", message: err.message})})
       
       const data = {
         user: {

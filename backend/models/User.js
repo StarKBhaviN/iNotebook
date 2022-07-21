@@ -17,10 +17,10 @@ const UserSchema = new Schema({
    },
    contact:{
     type : String,
-    required : true,
+    required : true
    },
    bio:{
-    type : String,
+    type : String
    },
    password:{
     type : String,
@@ -29,11 +29,7 @@ const UserSchema = new Schema({
    date:{
     type : Date,
     default: Date.now
-   },
-   // img:{
-   //    data: Buffer,
-   //    contentType: String
-   // }
+   }
 });
 
 const User = mongoose.model('user', UserSchema);

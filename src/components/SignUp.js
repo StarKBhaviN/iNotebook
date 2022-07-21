@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 const SignUp = (props) => {
+  const host = "http://localhost:5000"
+
   const [name, setName] = useState({ name: "" })
   const [gender, setGender] = useState({ gender: "" })
   const [email, setEmail] = useState({ email: "" })
@@ -9,13 +11,12 @@ const SignUp = (props) => {
   const [bio, setBio] = useState({ bio: "" })
   const [password, setPassword] = useState({ password: "" })
   const [cpassword, setCpassword] = useState({ cpassword: "" })
-  // const [img, setImg] = useState({img : ""})
 
   let navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/auth/createuser", {
+    const response = await fetch(`${host}/api/auth/createuser`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -56,9 +57,6 @@ const SignUp = (props) => {
   const onCpassChange = (e) => {
     setCpassword({ password: e.target.value })
   }
-  // const onImageChange = (e) => {
-  //     setImg({img : e.target.value})
-  // }
 
   return (
     <>
@@ -113,7 +111,7 @@ const SignUp = (props) => {
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                           <div className="form-outline flex-fill mb-0">
-                            <input type="text" id="bio" onChange={bioChanged} value={bio.bio} name="bio" className="form-control" minLength="10" />
+                            <input type="text" id="bio" onChange={bioChanged} value={bio.bio} name="bio" className="form-control" minLength={10} maxLength={30} required/>
                             <label className="form-label" htmlFor="form3Example3c">Your Bio</label>
                           </div>
                         </div>
