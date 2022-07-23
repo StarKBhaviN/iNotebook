@@ -16,6 +16,7 @@ const Notes = (props) => {
       getNotes();
     }
     else{
+      props.showAlert("Login required", "warning")
       navigate("/login")
     }
     // eslint-disable-next-line
@@ -28,15 +29,17 @@ const Notes = (props) => {
     ref.current.click();
     setNote({id: currentNote._id, etitle: currentNote.title , edescription: currentNote.description, etag: currentNote.tag});
   }
+
+  const onChange = (e)=> {
+    setNote({...note, [e.target.name]: e.target.value})
+  }
+
   const handleClick = (e)=>{
-    console.log("Updating", note);
     editNote(note.id, note.etitle, note.edescription, note.etag);
     refClose.current.click();
     props.showAlert("Updated Successfully", "success");
   }
-  const onChange = (e)=> {
-    setNote({...note, [e.target.name]: e.target.value})
-  }
+  
 
   return (
     
