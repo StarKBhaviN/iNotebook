@@ -37,21 +37,25 @@ const Login = (props) => {
         setPassword({password : e.target.value})
     }
     return (
-        <div className="container" style={{marginTop : "100px" , position : "fixed"}}>
+        <div className="body" style={{height : "10%"}}>
+            <img src={require("../Images/BG2.jpg")} style={{height : "657.5px", width : "100%", zIndex : "-1", opacity : "95%"}} alt="" />
 
-            <form onSubmit={handleSubmit}>
-                <div className="mb-3">
-                    <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" onChange={mailChanged} value={email.email} aria-describedby="emailHelp" />
-                        <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
-                </div>
-                <div className="mb-3">
-                    <label htmlFor="exampleInputPassword1" className="form-label">Password</label>
-                    <input type="password" className="form-control" id="exampleInputPassword1" onChange={passwordChanged} value={password.password}  />
-                </div>
-                <button type="submit" className="btn btn-primary" >Login</button>
-            </form>
+            <div className="container" style={{position : "fixed",top : "160px", left : "120px", display : "flex", alignItems : "center", justifyContent : "center"}}>
+                <div className="box" style={{border : "1px solid silver", boxShadow : "0px 0px 4px white", padding : "60px 30px 60px 30px", borderRadius : "12px", backgroundColor : "#12171a"}}>
+                {/* <img src="../Images/logincard.jpg" alt="nothing here" style={{opacity : "10%"}}/> */}
+                <form onSubmit={handleSubmit}>
 
+                    <div className="mb-3">
+                        <input type="email" placeholder="Enter Your Registered E-mail" style={{width: "400px",color : "white", borderBottom : "1px solid white", backgroundColor: "transparent", borderTop : "none", borderLeft : "none", borderRight : "none", borderRadius : "0"}} className="form-control" id="exampleInputEmail1" onChange={mailChanged} value={email.email} aria-describedby="emailHelp" />
+                            <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                    </div>
+                    <div className="mb-3">
+                        <input type="password" placeholder="Your Password" className="form-control" style={{width: "400px",color : "white", borderBottom : "1px solid white", backgroundColor: "transparent", borderTop : "none", borderLeft : "none", borderRight : "none", borderRadius : "0", marginTop : "30px"}} id="exampleInputPassword1" onChange={passwordChanged} value={password.password}  />
+                    </div>
+                    <button type="submit" style={{height : "40px", width : "400px", backgroundColor : "cyan", marginTop : "20px"}} className="btn" >LOGIN</button>
+                </form>
+                </div>
+            </div>
         </div>
     )
 }

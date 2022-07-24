@@ -28,6 +28,10 @@
   color: #61dafb;
 }
 
+input:focus {
+  outline: 0;
+}
+
 .show>.dropdown-menu {
   display: block;
   position: absolute;

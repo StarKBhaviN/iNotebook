@@ -17,7 +17,9 @@ code {
   src: local("Backslash-RpJol"),
    url("./fonts/Backslash-RpJol.otf") format("truetype");
   }
-
+  input:focus {
+    outline: 0;
+ }
   
 i{
   cursor: pointer;

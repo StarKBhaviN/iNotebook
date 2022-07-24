@@ -40,8 +40,8 @@ const Profile = () => {
                     <h1 className='text-center' style={{ color: "white" }}>My Profile</h1>
                 </div>
                 <div className="container">
-                    <div className="container" style={{ backgroundColor: "#1c2e4a", border: "2px solid #192841", borderRadius: "20px", boxShadow: "0px 0px 10px #888888", height: "510px", width: "500px" }}>
-                        <img className='position-absolute' src={require("../Images/Testing.jpg")} alt='Nothing here' style={{ border: "2px solid white", height: "220px", width: "440px", top: "160px", left: "548px" }}></img>
+                    <div className="container" style={{ backgroundColor: "#36494F", border: "1px solid #192841", borderRadius: "20px", boxShadow: "0px 0px 12px #888888", height: "510px", width: "500px" }}>
+                        <img className='position-absolute' src={("../Images/Testig.jpg")} alt='Nothing here' style={{ border: "2px solid white", borderRadius: "20px", height: "220px", width: "440px", top: "160px", left: "548px" }}></img>
                         <label className='position-absolute' style={{ top: "410px", left: "548px", color: "white" }}>Name : {users[1]}</label>
                         <label className='position-absolute' key={users[0]} style={{ top: "440px", left: "548px", color: "white" }}>Gender : {users[2]}</label>
                         <label className='position-absolute' style={{ top: "470px", left: "548px", color: "white" }}>E-Mail : {users[3]}</label>
