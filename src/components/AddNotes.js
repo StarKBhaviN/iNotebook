@@ -22,10 +22,10 @@ function AddNotes(props) {
   return (
     <>
         <div className="container" style={{margin : "100px 10px 0px 0px", width : "450px", border : "0px solid red"}}>
-        <h1>Add A Note</h1>
+        <h1 style={{color : "#979FA6", textAlign : "center"}}>Add A Note</h1>
         <form>
           <div className="mb-3">
-            <label htmlFor="title" className="form-label">
+            <label htmlFor="title" className="form-label" style={{color : "white"}}>
               Title
             </label>
             <input
@@ -38,10 +38,11 @@ function AddNotes(props) {
               value={note.title}
               minLength={5}
               required
+              style={{backgroundColor : "#36494F", color : "white",border : "none", boxShadow : "0px 0px 4px pink"}}
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="description" className="form-label">
+            <label htmlFor="description" className="form-label" style={{color : "white"}}>
               Description
             </label>
             <input
@@ -53,10 +54,11 @@ function AddNotes(props) {
               value={note.description}
               minLength={5}
               required
+              style={{backgroundColor : "#36494F", color : "white",border : "none", boxShadow : "0px 0px 4px pink"}}
             />
           </div>
           <div className="mb-3">
-            <label htmlFor="tag" className="form-label ">
+            <label htmlFor="tag" className="form-label " style={{color : "white"}}>
               Tag
             </label>
             <input
@@ -66,9 +68,10 @@ function AddNotes(props) {
               name='tag'
               onChange={onChange}
               value={note.tag}
+              style={{backgroundColor : "#36494F", color : "white",border : "none", boxShadow : "0px 0px 4px pink"}}
             />
           </div>
-          <button disabled={note.title.length<5||note.title.description<5} type="submit" className="btn btn-primary" onClick={handleClick}>
+          <button disabled={note.title.length<5||note.title.description<5} type="submit" className="btn" style={{backgroundColor : "#36494F", border : "1px solid white", color : "white", display : "flex", alignItems : "center"}} onClick={handleClick}>
             Add Note
           </button>
         </form>

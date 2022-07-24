@@ -35,7 +35,7 @@ const Profile = () => {
 
     return (
         <>
-            <div style={{ backgroundColor: "#152238", height: "92vh" }}>
+            <div style={{backgroundColor : "#36454F", minHeight : "41.1rem"}}>
                 <div className='container d-flex justify-content-center align-items-center' style={{ height: "90px" }}>
                     <h1 className='text-center' style={{ color: "white" }}>My Profile</h1>
                 </div>

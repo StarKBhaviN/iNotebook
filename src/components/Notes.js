@@ -85,9 +85,9 @@ const Notes = (props) => {
         </div>
       </div>
 
-      <div className="container" style={{margin : "100px 0px 0px 0px", borderLeft : "2px solid green", minHeight : "360px"}}>
+      <div className="container" style={{margin : "100px 0px 0px 0px", borderLeft : "2px solid #565d65", minHeight : "360px"}}>
         <div style={{marginLeft : "10px"}}>
-        <h1 style={{margin : "0px 0px 22px 0px", textAlign : "center"}}>Your Notes</h1>
+        <h1 style={{margin : "0px 0px 22px 0px", textAlign : "center", color : "#979FA6"}}>Your Notes</h1>
       <div className="row my-3" style={{border : "0px solid blue"}}>
         <div className="container" style={{fontSize : "20px", paddingTop : "0px", textAlign : "center"}}>
           {notes.length === 0 && 'No Notes To Display'}

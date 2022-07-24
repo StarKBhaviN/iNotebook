@@ -11,7 +11,7 @@ const NoteItem = (props) => {
   var noteDate = orgDate.split("-").reverse().join("-");
   return (
     <div className='container col-md-4'>
-      <div className="card my-3" style={{width : "18rem"}}>
+      <div className="card my-3" style={{width : "18rem", backgroundColor : "#36494F", boxShadow : "0px 0px 4px pink", color : "#699995"}}>
           <div className="card-body">
             <div>
             <h5 className="card-title" style={{display : "inline-block", width : "190px"}}>{note.title}</h5>
