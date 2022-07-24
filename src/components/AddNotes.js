@@ -30,6 +30,7 @@ function AddNotes(props) {
             </label>
             <input
               type="text"
+              autoComplete="off"
               className="form-control w-52"
               id="title"
               name='title'
@@ -47,6 +48,7 @@ function AddNotes(props) {
             </label>
             <input
               type="text"
+              autoComplete="off"
               className="form-control w-52"
               id="description"
               name='description'
@@ -63,6 +65,7 @@ function AddNotes(props) {
             </label>
             <input
               type="text"
+              autoComplete="off"
               className="form-control w-52"
               id="tag"
               name='tag'

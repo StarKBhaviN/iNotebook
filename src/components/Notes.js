@@ -63,15 +63,15 @@ const Notes = (props) => {
                   <form className='my-2'>
                     <div className="mb-3">
                       <label htmlFor="title" className="form-label">Title</label>
-                      <input type="text" className="form-control" id="etitle" name='etitle' aria-describedby="emailHelp" onChange={onChange} value={note.etitle ?? ""} minLength={5} required/>
+                      <input type="text" autoComplete="off" className="form-control" id="etitle" name='etitle' aria-describedby="emailHelp" onChange={onChange} value={note.etitle ?? ""} minLength={5} required/>
                     </div>
                     <div className="mb-3">
                       <label htmlFor="description" className="form-label">Description</label>
-                      <input type="text" className="form-control" id="edescription" name='edescription' onChange={onChange} value={note.edescription ?? ""} minLength={5} required/>
+                      <input type="text" autoComplete="off" className="form-control" id="edescription" name='edescription' onChange={onChange} value={note.edescription ?? ""} minLength={5} required/>
                     </div>
                     <div className="mb-3">
                       <label htmlFor="tag" className="form-label">Tag</label>
-                      <input type="text" className="form-control" id="etag" name='etag' onChange={onChange} value={note.etag ?? ""}/>
+                      <input type="text" autoComplete="off" className="form-control" id="etag" name='etag' onChange={onChange} value={note.etag ?? ""}/>
                     </div>
                   </form>
                 </div>

@@ -76,17 +76,17 @@ const SignUp = (props) => {
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-user fa-lg me-3 fa-fw"></i>
                           <div className="form-outline flex-fill mb-0">
-                            <input type="text" id="name" onChange={onNameChange} name="name" value={name.name} className="form-control" />
+                            <input autoComplete="off" type="text" id="name" onChange={onNameChange} name="name" value={name.name} className="form-control" />
                             <label className="form-label" htmlFor="form3Example1c">Your Name</label>
                           </div >
 
 
                           <div style={{ display: "flex", flexDirection: "column" }}>
                             <div className="form-outline flex-fill mb-0 mx-2">
-                              <input type="radio" id="genderMale" onChange={onGenderChange} value={"Male"} name="gender" /> Male
+                              <input autoComplete="off" type="radio" id="genderMale" onChange={onGenderChange} value={"Male"} name="gender" /> Male
                             </div>
                             <div className="form-outline flex-fill mb-0 mx-2" >
-                              <input type="radio" id="genderFemale" onChange={onGenderChange} value={"Female"} name="gender" /> Female
+                              <input autoComplete="off" type="radio" id="genderFemale" onChange={onGenderChange} value={"Female"} name="gender" /> Female
                             </div>
                           </div>
 
@@ -95,7 +95,7 @@ const SignUp = (props) => {
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                           <div className="form-outline flex-fill mb-0">
-                            <input type="email" id="email" onChange={mailChanged} name="email" value={email.email} className="form-control" minLength="5" required />
+                            <input autoComplete="off" type="email" id="email" onChange={mailChanged} name="email" value={email.email} className="form-control" minLength="5" required />
                             <label className="form-label" htmlFor="form3Example3c">Your Email</label>
                           </div>
                         </div>
@@ -103,7 +103,7 @@ const SignUp = (props) => {
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                           <div className="form-outline flex-fill mb-0">
-                            <input type="text" id="contact" onChange={contactChanged} value={contact.contact} name="contact" className="form-control" minLength="10" maxLength="10" required />
+                            <input autoComplete="off" type="text" id="contact" onChange={contactChanged} value={contact.contact} name="contact" className="form-control" minLength="10" maxLength="10" required />
                             <label className="form-label" htmlFor="form3Example3c">Contact No.</label>
                           </div>
                         </div>
@@ -111,7 +111,7 @@ const SignUp = (props) => {
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-envelope fa-lg me-3 fa-fw"></i>
                           <div className="form-outline flex-fill mb-0">
-                            <input type="text" id="bio" onChange={bioChanged} value={bio.bio} name="bio" className="form-control" minLength={10} maxLength={30} required/>
+                            <input autoComplete="off" type="text" id="bio" onChange={bioChanged} value={bio.bio} name="bio" className="form-control" minLength={10} maxLength={30} required/>
                             <label className="form-label" htmlFor="form3Example3c">Your Bio</label>
                           </div>
                         </div>
@@ -119,7 +119,7 @@ const SignUp = (props) => {
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-lock fa-lg me-3 fa-fw"></i>
                           <div className="form-outline flex-fill mb-0">
-                            <input type="password" id="password" onChange={passwordChanged} name="password" value={password.password} className="form-control" minLength="5" required />
+                            <input autoComplete="off" type="password" id="password" onChange={passwordChanged} name="password" value={password.password} className="form-control" minLength="5" required />
                             <label className="form-label" htmlFor="form3Example4c">Password</label>
                           </div>
                         </div>
@@ -127,7 +127,7 @@ const SignUp = (props) => {
                         <div className="d-flex flex-row align-items-center mb-4">
                           <i className="fas fa-key fa-lg me-3 fa-fw"></i>
                           <div className="form-outline flex-fill mb-0">
-                            <input type="password" id="cpassword" onChange={onCpassChange} name="cpassword" value={cpassword.cpassword} className="form-control" minLength="5" required />
+                            <input autoComplete="off" type="password" id="cpassword" onChange={onCpassChange} name="cpassword" value={cpassword.cpassword} className="form-control" minLength="5" required />
                             <label className="form-label" htmlFor="form3Example4cd">Confirm password</label>
                           </div>
                         </div>
