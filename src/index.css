@@ -12,6 +12,13 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: "Backslash-RpJol";
+  src: local("Backslash-RpJol"),
+   url("./fonts/Backslash-RpJol.otf") format("truetype");
+  }
+
+  
 i{
   cursor: pointer;
 }
