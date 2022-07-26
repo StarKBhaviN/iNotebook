@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Notes = (props) => {
   const context = useContext(NoteContext);
+  const [query , setQuery] = useState('');
 
   let navigate  = useNavigate()
 
@@ -87,13 +88,24 @@ const Notes = (props) => {
 
       <div className="container" style={{margin : "100px 0px 0px 0px", borderLeft : "2px solid #565d65", minHeight : "360px"}}>
         <div style={{marginLeft : "10px"}}>
-        <h1 style={{margin : "0px 0px 22px 0px", textAlign : "center", color : "#979FA6"}}>Your Notes</h1>
+        <div>
+          <h1 style={{margin : "0px 0px 22px 0px", textAlign : "center", color : "#979FA6"}}>Your Notes</h1>
+          <input autoComplete="off" className={`form-control me-2 search bg-${props.mode==='light'?'light':'dark'}`} style={{color:"white", width : "150px", height : "35px"}} type="search" placeholder="Search" aria-label="Search" onChange={event => setQuery(event.target.value)}/>
+        </div>
       <div className="row my-3" style={{border : "0px solid blue"}}>
         <div className="container" style={{fontSize : "20px", paddingTop : "0px", textAlign : "center"}}>
           {notes.length === 0 && 'No Notes To Display'}
         </div>
         
         {notes
+        .filter((value)=>{
+          if(query === ''){
+            return value;
+          }
+          else if(value.title.toLowerCase().includes(query.toLowerCase()) || value.description.toLowerCase().includes(query.toLowerCase()) || value.tag.toLowerCase().includes(query.toLowerCase())){
+              return value;
+              }
+            })
         .sort( (a,b) => a.date > b.date ? -1 : 1)
         .map((note) => {
           return (

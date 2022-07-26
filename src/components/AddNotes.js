@@ -37,7 +37,7 @@ function AddNotes(props) {
               aria-describedby="emailHelp"
               onChange={onChange}
               value={note.title}
-              minLength={5}
+              minLength={3}
               required
               style={{backgroundColor : "#36494F", color : "white",border : "none", boxShadow : "0px 0px 4px pink"}}
             />
@@ -74,7 +74,7 @@ function AddNotes(props) {
               style={{backgroundColor : "#36494F", color : "white",border : "none", boxShadow : "0px 0px 4px pink"}}
             />
           </div>
-          <button disabled={note.title.length<5||note.title.description<5} type="submit" className="btn" style={{backgroundColor : "#36494F", border : "1px solid white", color : "white", display : "flex", alignItems : "center"}} onClick={handleClick}>
+          <button disabled={note.title.length<3 || note.description.length<5} type="submit" className="btn" style={{backgroundColor : "#36494F", border : "1px solid white", color : "white", display : "flex", alignItems : "center"}} onClick={handleClick}>
             Add Note
           </button>
         </form>
