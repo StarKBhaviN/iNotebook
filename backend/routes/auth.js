@@ -15,7 +15,7 @@ router.post(
     body("gender", "Gender Required..."),
     body("email", "Enter a Valid E-mail...").isEmail(),
     body("contact", "Enter a Valid Contact...").isLength({ min : 10, max : 10}),
-    body("bio", "About You").isLength({ min : 10}),
+    body("bio", "About You").isLength({ min : 10 , max : 120}),
     body("password", "password must be atleast 5 chars").isLength({ min: 6 })
   ],
   async (req, res) => {

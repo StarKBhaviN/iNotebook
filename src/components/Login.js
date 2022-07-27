@@ -46,13 +46,13 @@ const Login = (props) => {
                 <form onSubmit={handleSubmit}>
 
                     <div className="mb-3">
-                        <input type="email" autoComplete="off" placeholder="Enter Your Registered E-mail" style={{width: "400px",color : "white", borderBottom : "1px solid white", backgroundColor: "transparent", borderTop : "none", borderLeft : "none", borderRight : "none", borderRadius : "0"}} className="form-control" id="exampleInputEmail1" onChange={mailChanged} value={email.email} aria-describedby="emailHelp" />
+                        <input type="email" autoComplete="off" placeholder="Enter Your Registered E-mail" style={{width: "400px",color : "white", borderBottom : "1px solid white", backgroundColor: "transparent", borderTop : "none", borderLeft : "none", borderRight : "none", borderRadius : "0"}} className="form-control shadow-none" id="exampleInputEmail1" onChange={mailChanged} value={email.email} aria-describedby="emailHelp" />
                             <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
                     </div>
                     <div className="mb-3">
-                        <input type="password" autoComplete="off" placeholder="Your Password" className="form-control" style={{width: "400px",color : "white", borderBottom : "1px solid white", backgroundColor: "transparent", borderTop : "none", borderLeft : "none", borderRight : "none", borderRadius : "0", marginTop : "30px"}} id="exampleInputPassword1" onChange={passwordChanged} value={password.password}  />
+                        <input type="password" autoComplete="off" placeholder="Your Password" className="form-control shadow-none" style={{width: "400px",color : "white", borderBottom : "1px solid white", backgroundColor: "transparent", borderTop : "none", borderLeft : "none", borderRight : "none", borderRadius : "0", marginTop : "30px"}} id="exampleInputPassword1" onChange={passwordChanged} value={password.password}  />
                     </div>
-                    <button type="submit" style={{height : "40px", width : "400px", backgroundColor : "cyan", marginTop : "20px"}} className="btn" >LOGIN</button>
+                    <button type="submit" style={{height : "40px", width : "400px", backgroundColor : "cyan", marginTop : "20px"}} className="btn shadow-none" >LOGIN</button>
                 </form>
                 </div>
             </div>

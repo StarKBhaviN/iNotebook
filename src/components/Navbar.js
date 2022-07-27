@@ -58,11 +58,11 @@ function Navbar() {
           </ul>
           
           {!localStorage.getItem('token') ? <form className="d-flex">
-            <Link className="btn text-light mx-1" to="/signup" role="button" style={{ border: "none", fontSize: "16px" }}><i className="fa-solid fa-user-plus" style={{ fontSize: "16px", marginRight: "2px" }}></i> Sign Up</Link>
-            <Link className="btn text-light mx-1" to="/login" role="button" style={{ border: "none", fontSize: "16px" }}><i className="fa-solid fa-right-to-bracket" style={{ fontSize: "16px", marginRight: "2px" }}></i> Login</Link>
+            <Link className="btn text-light mx-1 shadow-none" to="/signup" role="button" style={{ border: "none", fontSize: "16px" }}><i className="fa-solid fa-user-plus" style={{ fontSize: "16px", marginRight: "2px" }}></i> Sign Up</Link>
+            <Link className="btn text-light mx-1 shadow-none" to="/login" role="button" style={{ border: "none", fontSize: "16px" }}><i className="fa-solid fa-right-to-bracket" style={{ fontSize: "16px", marginRight: "2px" }}></i> Login</Link>
           </form> : <div style={{display : "flex", alignItems : "center", justifyContent : "center"}}>
             <UserDetails></UserDetails>
-            <button onClick={handleLogout} className="btn text-light"><i className="fa-solid fa-right-from-bracket" style={{ padding: "2px" }}></i></button></div>
+            <button onClick={handleLogout} className="btn text-light shadow-none"><i className="fa-solid fa-right-from-bracket" style={{ padding: "2px" }}></i></button></div>
             }
         </div>
       </div>
