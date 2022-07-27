@@ -13,6 +13,8 @@ function AddNotes(props) {
     addNote(note.title, note.description, note.tag);
     setNote({ title: "", description: "", tag: "" });
     props.showAlert("Added Successfully", "success");
+    document.getElementById("titShow").innerHTML = "0";
+    document.getElementById("disShow").innerHTML = "0";
   }
 
   const onChange = (e) => {
