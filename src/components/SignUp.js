@@ -29,7 +29,7 @@ const SignUp = (props) => {
     if (json.success) {
       localStorage.setItem('token', json.authtoken);
       props.showAlert("Successfully Created User", "success")
-      navigate("/login")
+      navigate("/home")
     }
     else {
       props.showAlert("Invalid Detials", "danger")
@@ -83,10 +83,10 @@ const SignUp = (props) => {
 
                           <div style={{ display: "flex", flexDirection: "column" }}>
                             <div className="form-outline flex-fill mb-0 mx-2">
-                              <input autoComplete="off" type="radio" id="genderMale" onChange={onGenderChange} value={"Male"} name="gender" /> Male
+                              <input type="radio" id="genderMale" onChange={onGenderChange} value={"Male"} name="gender" /> Male
                             </div>
                             <div className="form-outline flex-fill mb-0 mx-2" >
-                              <input autoComplete="off" type="radio" id="genderFemale" onChange={onGenderChange} value={"Female"} name="gender" /> Female
+                              <input type="radio" id="genderFemale" onChange={onGenderChange} value={"Female"} name="gender" /> Female
                             </div>
                           </div>
 
