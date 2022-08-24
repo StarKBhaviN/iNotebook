@@ -35,23 +35,58 @@ const Profile = () => {
 
     return (
         <>
-            <div style={{backgroundColor : "#36454F", minHeight : "41.1rem"}}>
-                <div className='container d-flex justify-content-center align-items-center' style={{ height: "90px" }}>
+            {/* <div style={{backgroundColor : "#36454F", display : "flex", alignItems : "center", justifyContent : "center", position : "absolute", height : "100vh", top : "0", width : "100%"}}>
+                <div className='container' style={{ height: "90px" }}>
                     <h1 className='text-center' style={{ color: "white" }}>My Profile</h1>
                 </div>
                 <div className="container">
-                    <div className="container" style={{ backgroundColor: "#36494F", border: "1px solid #192841", borderRadius: "20px", boxShadow: "0px 0px 12px #888888", height: "510px", width: "500px" }}>
-                        <img className='position-absolute' src={("../Images/Testig.jpg")} alt='Nothing here' style={{ border: "2px solid white", borderRadius: "20px", height: "220px", width: "440px", top: "160px", left: "548px" }}></img>
-                        <label className='position-absolute' style={{ top: "410px", left: "548px", color: "white" }}>Name : {users[1]}</label>
-                        <label className='position-absolute' key={users[0]} style={{ top: "440px", left: "548px", color: "white" }}>Gender : {users[2]}</label>
-                        <label className='position-absolute' style={{ top: "470px", left: "548px", color: "white" }}>E-Mail : {users[3]}</label>
-                        <label className='position-absolute' style={{ top: "500px", left: "548px", color: "white" }}>Ph. No : {users[4]}</label>
-                        <label className='position-absolute' style={{ top: "530px", left: "548px", color: "white", width: "460px" }}>Bio : {users[5]}</label>
-                        <label className='position-absolute' style={{ top: "590px", left: "548px", color: "white" }}>No of Notes : {notes.length}</label>
-                        <label className='position-absolute' style={{ top: "620px", left: "675px", color: "white" }}>Member since {orgDate}</label>
+                    <div className="container" style={{ backgroundColor: "#36494F", border: "1px solid #192841", borderRadius: "20px", boxShadow: "0px 0px 12px #888888", minHeight: "100%", width: "500px" }}>
+                        <img src={("../Images/Testig.jpg")} alt='Nothing here' style={{ border: "2px solid white", borderRadius: "20px", height: "220px", width: "440px", top: "160px", left: "548px" }}></img>
+                        <label>Name : {users[1]}</label>
+                        <label>Gender : {users[2]}</label>
+                        <label>E-Mail : {users[3]}</label>
+                        <label>Ph. No : {users[4]}</label>
+                        <label>Bio : {users[5]}</label>
+                        <label>No of Notes : {notes.length}</label>
+                        <label>Member since {orgDate}</label>
                     </div>
                 </div>
                 {/* <label htmlFor="" style={{ color: "red" }}>{JSON.stringify(pros)} </label> */}
+            {/* </div> */} 
+
+            <div style={{backgroundColor : "#36454F", height : "100vh", position : "absolute", top : "0px",width:"100%"}}>
+                <h1 style={{position:"absolute",top:"60px",color : "white", display : 'flex', alignItems : "center", justifyContent : "center", width:"100%"}}>Your Profile</h1>
+                <div className="container-body" style={{border : "0px solid red", height : "100vh", width : "100%", display : "flex", alignItems : "center", justifyContent : "center"}}>
+                    <div className="card" style={{border : "2px solid red",backgroundColor: "#36494F", height : "70%", width : "30%", marginTop : "100px"}}>
+                        <img src={("../Images/Testig.jpg")} alt="Nothing here" style={{ border: "2px solid white", borderRadius: "10px", height: "40%", width: "96%", marginLeft : "7px"}}/>
+                        <table border="0" height="240px" width="95%" cellPadding="-10px" cellspacing="0px" style={{marginLeft : "10px", color:"white"}}>
+                            <tr>
+                                <td width="94px">Name</td>
+                                <td>: {users[1]}</td>
+                            </tr>
+                            <tr>
+                                <td>Gender</td>
+                                <td>: {users[2]}</td>
+                            </tr>
+                            <tr>
+                                <td>E-Mail</td>
+                                <td>: {users[3]}</td>
+                            </tr>
+                            <tr>
+                                <td>Ph. No</td>
+                                <td>: {users[4]}</td>
+                            </tr>
+                            <tr>
+                                <td style={{verticalAlign : "middle"}}>Bio</td>
+                                <td>: {users[5]}</td>
+                            </tr>
+                            <tr>
+                                <td>No of Notes </td>
+                                <td>: {notes.length}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
             </div>
         </>
     )

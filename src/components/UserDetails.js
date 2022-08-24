@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Userdetails = () => {
-  const [users, setUsers] = useState([]) // aava bija banave to output malse profile mate
+  const [users, setUsers] = useState([])
   const userName = async () => {
 
     const response = await fetch("http://localhost:5000/api/auth/getuser", {

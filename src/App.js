@@ -11,6 +11,7 @@ import { useState  } from "react";
 import Profile from "./components/Profile";
 
 function App() {
+  
   const [alert, setAlert] = useState(null)
 
   const showAlert = (message, type) => {
@@ -27,7 +28,7 @@ function App() {
       <NoteState>
         <Router>
           <Navbar />
-          <Alert alert={alert} />
+            <Alert alert={alert} />
           <div >
             <Routes>
               <Route exact path="/Home" element={<Home showAlert={showAlert} />} />

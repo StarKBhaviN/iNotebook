@@ -17,7 +17,7 @@ function Navbar() {
 
   return (
     // 
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{zIndex : "1"}}>
       <div className="container-fluid">
         <i className="fa-solid fa-notebook"></i>
         <Link className="navbar-brand" to="/">

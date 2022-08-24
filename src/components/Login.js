@@ -37,10 +37,10 @@ const Login = (props) => {
     }
 
     return (
-        <div className="body" style={{ height: "10%" }}>
-            <img src={require("../Images/BG2.jpg")} style={{ height: "657.5px", width: "100%", zIndex: "-1", opacity: "95%" }} alt="" />
+        <div className="body" style={{ position : "absolute",top: "0", height: "100vh", width:"100%", border : "0px solid red"}}>
 
-            <div className="container" style={{ position: "fixed", top: "160px", left: "120px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <img src={require("../Images/BG2.jpg")} style={{ position:"absolute", height: "100%", width: "100%", zIndex: "-1", opacity: "95%" }} alt="" />
+            <div className="container" style={{ height : "100vh", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <div className="box" style={{ border: "1px solid silver", boxShadow: "0px 0px 4px white", padding: "60px 30px 60px 30px", borderRadius: "12px", backgroundColor: "#12171a" }}>
                     {/* <img src="../Images/logincard.jpg" alt="nothing here" style={{opacity : "10%"}}/> */}
                     <form onSubmit={handleSubmit}>
